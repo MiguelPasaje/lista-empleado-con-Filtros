@@ -44,7 +44,14 @@ export class EmpleadoListComponent {
       Salario: 123,
     },
     {
-      Legajo: 5,
+      Legajo: 6,
+      nombre: 'ximena',
+      Apellido: 'asd',
+      Sexo: 'F',
+      Salario: 123,
+    },
+    {
+      Legajo: 7,
       nombre: 'ximena',
       Apellido: 'asd',
       Sexo: 'F',
@@ -61,6 +68,10 @@ export class EmpleadoListComponent {
   }
   obtenerTotalEmpleadosMasculinos():number{
     return this.listEmpleados.filter(list => list.Sexo === 'M').length
+  }
+
+  empleadoCountRadioButtonChange(radioButtonSelec:string):void{
+    this.radioButtonSeleccionado = radioButtonSelec
   }
 
 }
